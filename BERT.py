@@ -3,6 +3,7 @@ import re
 from sklearn.metrics.pairwise import cosine_similarity
 from gensim.parsing.preprocessing import remove_stopwords
 
+df = pd.read_csv("preprocessed_dataset.csv", index_col = 0)
 def clean_sentence(sentence, stopwords=False):   
     sentence = sentence.lower().strip()
     sentence = re.sub(r'[^a-z0-9\s]', '', sentence)
